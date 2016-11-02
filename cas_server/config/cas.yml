@@ -1,0 +1,21 @@
+development:
+  frontend:
+    sso_name: 'Marsbased'
+    footer_text: 'All rights reserved by Marsbased'
+  authenticators:
+    my_company_sql:
+      authenticator: "ActiveRecord"
+      options:
+        connection:
+          adapter: "postgresql"
+          host: "localhost"
+          username:
+          password:
+          database: "xxxxx"
+        table: "users"
+        username_column: "email"
+        password_column: "encrypted_password"
+        pepper:
+        extra_attributes:
+          email: "email"
+          fullname: "email"
